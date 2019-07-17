@@ -159,6 +159,30 @@ footer {
 	margin-bottom: 100px;
 }
 
+/*Service部*/
+.service-table {
+    border-spacing: 0px 60px;
+}
+
+.service-content {
+    padding: 20px 90px;
+}
+
+.service-title {
+    color: #D4004E;
+    font-size: 20px;
+}
+
+.service-description {
+    font-size: 13px;
+    line-height: 35px;
+    margin-top: 30px;
+}
+
+.service-content-foot {
+    text-align: center;
+}
+
 /*News部*/
 
 .news-items {
