@@ -12,19 +12,25 @@ body {
 **Layout
 */
 .container {
-    width: 980px;
+    max-width: 980px;
     margin: 0 auto;
 }
 
 .top-wrapper {
+    /*
     background-color:#F2F3F7;
-    height: 792px;
+    */
+    height: 966px;
+    background-image: url("image/メインビジュアル.png"), linear-gradient(#F2F3F7 100%, #fff 0%);
+    background-repeat: no-repeat;
+    background-position: 50% -180px;    
+    margin-bottom:-100px;
 }
 
 footer {
     background-color: #333333;
     height: 261px;
-	color: white;
+	color: #fff;
     text-align: center;
 }
 
@@ -98,6 +104,7 @@ footer {
 */
 
 /*画像の制御*/
+/*ToDo: 消す（確認用画像）*/
 #menu__img {
     margin-top: 50px; 
     position: absolute;
@@ -141,7 +148,6 @@ footer {
 /*About部*/
 .about {
     width: 100%;
-    margin-top: 100px;
 }
 .about__foot {
 	text-align: center;
@@ -283,16 +289,16 @@ footer {
 	padding-bottom: 10px;
 }
 
-.footer-nav-list li {
+.footer-nav-list__item {
     display: inline;
     margin: 0 20px;
 }
-.footer-nav-list li+ li {
-	border-left: 1px solid white;
+.footer-nav-list__item+ .footer-nav-list__item {
+    border-left: 1px solid white;
 	padding-left: 40px;
 }
 
-.footer-nav-list a {
+.footer-nav-list__item-content {
 	text-decoration: none;
 	font-size: 10px;
 }
