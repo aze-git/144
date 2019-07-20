@@ -3,8 +3,7 @@
 */
 
 body {
-    font-family: 'Noto Sans CJK JP', sans-serif;
-    /*ToDo: フォントが適用されていない */
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 a {
@@ -259,7 +258,7 @@ footer {
 }
 
 .service__table-content {
-    padding: 20px 90px;
+    padding: 20px 80px;
 }
 
 .service__content-title {
@@ -271,6 +270,7 @@ footer {
     font-size: 13px;
     line-height: 35px;
     margin-top: 30px;
+    margin-bottom: 40px;
 }
 
 .service__content-foot {
