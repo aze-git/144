@@ -22,6 +22,7 @@ ul {
     margin: 0 auto;
 }
 
+/* TOP画面のみ */
 .top-wrapper {
     /*
     background-color:#F2F3F7;
@@ -34,6 +35,46 @@ ul {
     overflow: hidden;
 }
 
+/* TOP画面以外 */
+.head-wrapper {
+    height: 361px;
+    background-color: #F2F3F7;
+    background-image: url("image/header_background.png");
+    background-repeat: no-repeat;
+    background-position: 50% -220px;
+    margin-bottom:100px;
+    overflow: hidden;
+}
+
+/*ABOUT画面*/
+.corporate-vision{
+    height: 600px;
+    background-image: url("image/corporate-vision_image.png");
+    background-repeat: no-repeat;
+    background-position: 100%;
+    margin-bottom: 100px;
+}
+
+.company-info {
+    margin-bottom: 100px;
+}
+
+.office-access {
+    margin-bottom: 110px;
+}
+
+.executives {
+    margin-bottom: 140px;
+}
+
+/* 共通レイアウト */
+.left-align {
+    text-align: left;
+    float: left;
+}
+.right-align {
+    text-align: right;
+}
 
 /*
 **Module - 1. 汎用部品
@@ -191,6 +232,21 @@ footer {
 	margin-top: -5px;
   }
 
+/*1-3-2. 矢印なしボタン (ピンクのみ)*/
+.btn-normal {
+	display: inline-block;
+	width: 82px;
+	height: 20px;
+	text-align: center;
+    line-height: 20px;
+    background: #D4004E;
+}
+  
+.btn-normal span {
+	font-size: 10px;
+    color: #FFFFFF;
+}
+
 /*
 **Module - 2. 個別指定
 */
@@ -214,13 +270,7 @@ footer {
     vertical-align: top;
 }
 
-.news__head {
-    position: relative;
-    top: 30px;
-    z-index: 10;
-}
-
-.about__head {
+.head--overlap {
     position: relative;
     top: 30px;
     z-index: 10;
@@ -370,6 +420,114 @@ footer {
 	margin: 30px 0 100px 0;
 }
 
+/*2-2. NEWSページ*/
+.news-page__title {
+    text-align: center;
+    font-size: 46px;
+    position: relative;
+    top: 70px;
+}
+
+.news__item-wide {
+    min-height: 26px;
+    line-height: 26px;
+    margin-bottom: 15px;
+    background-color: #F2F3F7;
+    padding: 30px 30px;
+}
+
+.news-page__foot {
+    margin-top: 55px;
+    margin-bottom: 90px;
+}
+
+/*2-3. Aboutページ*/
+.corporate-vision__img {
+    margin: 50px 0 40px 0;
+}
+
+.corporate-vision__description {
+    width: 490px;
+    line-height: 32px;
+    letter-spacing: 2px;
+    font-size: 15px;
+    color: #333333;
+}
+
+.company-info__table {
+    font-size: 13px;
+    color: #333333;
+}
+
+.company-info__table-row {
+    background-color: #F2F3F7;
+    display: flex;
+    align-items: flex-start;
+    padding: 25px 35px;
+    margin-bottom: 4px;
+    margin-left: 30px;
+}
+
+.company-info__table-row-first {
+    padding-top: 50px;
+}
+
+.company-info__table-attribute {
+    width: 100px;
+}
+
+.company-info__table-data {
+    border-left: 1px solid #707070;
+    padding-left: 30px;
+}
+
+.company-info__btn {
+    margin-top: 20px;
+}
+
+.access__map {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+}
+
+.access__description {
+    background-color: #F2F3F7;
+    padding: 30px 40px;
+    margin: 40px 0 40px 30px;
+}
+
+.executive__table-row {
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 85px;
+}
+
+.executive__table-data {
+    width: 50%;
+    margin-left: 30px;
+    position: relative;
+}
+
+.executive__table-description {
+    background-color: #D4004E;
+    color: #fff;
+    padding: 15px 30px;
+    height: 220px;
+    max-width: 190px;
+    font-size: 13px;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+}
+
+.executive__table-name {
+    font-size: 24px;
+}
+
+.executive__table-jobtitle {
+    font-size: 14px;
+}
+
 
 /*
 **State
@@ -393,7 +551,8 @@ footer {
     width: 100%;
 }
 
-.news__item:hover {
+.news__item:hover,
+.news__item-wide:hover {
     background-color: #DBDCDD;
 }
 
