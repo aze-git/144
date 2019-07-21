@@ -36,6 +36,13 @@ ul {
 }
 
 /* TOP画面以外 */
+.page__title {
+    text-align: center;
+    font-size: 46px;
+    position: relative;
+    top: 70px;
+}
+
 .head-wrapper {
     height: 361px;
     background-color: #F2F3F7;
@@ -180,8 +187,8 @@ footer {
 	height: 35.8px;
 	text-align: center;
 	line-height: 35.8px;
-  }
-  
+}
+
   .btn-arrow span {
 	position: relative;
 	font-size: 13px;
@@ -261,6 +268,13 @@ footer {
 
 .head__title {
 	font-size: 43px;
+	color: #333333;
+    vertical-align: top;
+    margin-left: 20px;
+}
+
+.head__title-small {
+	font-size: 26px;
 	color: #333333;
     vertical-align: top;
     margin-left: 20px;
@@ -421,13 +435,6 @@ footer {
 }
 
 /*2-2. NEWSページ*/
-.news-page__title {
-    text-align: center;
-    font-size: 46px;
-    position: relative;
-    top: 70px;
-}
-
 .news__item-wide {
     min-height: 26px;
     line-height: 26px;
@@ -528,6 +535,51 @@ footer {
     font-size: 14px;
 }
 
+/*2-4. Serviceページ*/
+.service-page__head {
+    position: relative;
+    z-index: 20;
+}
+
+.service-page__item {
+    background-color: #F2F3F7;
+    padding: 70px 100px 50px 60px;
+    margin-left: 20px;
+    width: 40%;
+    position: relative;
+    z-index: 10;
+}
+
+.service-page__description {
+    padding-bottom: 110px;
+}
+
+.service-page__btn {
+    width: 110px;
+    margin-bottom: 18px;
+    margin-right: 15px;
+}
+
+.service-page__row {
+    position: relative;
+}
+
+.service-page__logo {
+    position: absolute;
+    top: -10%;
+    left: 65%;
+}
+
+.service-page__picture {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    z-index: 20;
+}
+
+.service-page__picture-data {
+    width: 100%;
+}
 
 /*
 **State
