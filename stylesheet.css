@@ -23,14 +23,11 @@ ul {
 }
 
 .top-wrapper {
-    /*
-    background-color:#F2F3F7;
-    */
-    height: 966px;
-    background-image: url("image/メインビジュアル.png"), linear-gradient(#F2F3F7 100%, #fff 0%);
+    padding-bottom: 53%;
+    background-size: 100%;
+    background-image: url("image/main_visual.png");
     background-repeat: no-repeat;
-    background-position: 50% -180px;    
-    margin-bottom:-100px;
+    background-position: 50% -190px;
     overflow: hidden;
 }
 
@@ -248,7 +245,6 @@ footer {
 }
 
 /*Service部*/
-/*ToDo: delete*/
 .service__img {
     width: 100%;
 }
