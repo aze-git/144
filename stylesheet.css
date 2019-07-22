@@ -78,16 +78,6 @@ ul {
   margin-bottom: 140px;
 }
 
-/* 共通レイアウト */
-
-.left-align {
-  text-align: left;
-  float: left;
-}
-
-.right-align {
-  text-align: right;
-}
 
 /*
 **Module - 1. 汎用部品
@@ -351,8 +341,6 @@ footer {
 
 /*Service部*/
 
-/*ToDo: delete*/
-
 .service__img {
   width: 100%;
 }
@@ -487,7 +475,25 @@ footer {
 .news-page__foot {
   margin-top: 55px;
   margin-bottom: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.page {
+  font-size: 14px;
+  color: #333333;
+  margin: 10px;
+}
+
+.selected-page {
+  color: #D4004E;
+}
+
+.initial-page {
+  display: none;
+}
+
 
 /*2-3. Aboutページ*/
 
