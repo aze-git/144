@@ -1,0 +1,28 @@
+@media screen and (max-width: 1050px) {
+
+    /*TOPページの対応*/
+    .header {
+        margin-top: 10px;
+    }
+
+    .nav__item {
+        margin-left: 40px;
+    }
+
+    .top-wrapper {
+        background-position: 50% -100px;
+    }    
+    
+    .nav__item + .nav__item::before {
+        left: -20px;
+    }
+
+    .nav__item-en {
+        font-size: 10px;
+    }
+    
+    .nav__item-jp {
+        font-size: 8px;
+    }
+
+  }

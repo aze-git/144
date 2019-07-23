@@ -1,0 +1,417 @@
+/*
+**Base
+*/
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+  }
+
+/*
+**Layout
+*/
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.top-wrapper {
+    padding-bottom: 53%;
+    background-size: 100%;
+    background-image: url("image/main_visual.png");
+    background-repeat: no-repeat;
+    background-position: 50% -190px;
+    overflow: hidden;
+}
+
+
+/*
+**Module - 1. 汎用部品
+*/
+
+/*1-1. ヘッダモジュール*/
+
+.header {
+    display: flex;
+    background-color: #fff;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.15);
+    padding: 0 40px;
+    margin-top: 50px;
+}
+
+.nav__list {
+    display: flex;
+}
+
+.nav__item {
+    text-align: center;
+    margin-left: 92px;
+    position: relative;
+}
+
+.nav__item + .nav__item::before {
+    content: '|';
+    position: absolute;
+    top: 30%;
+    left: -46px;
+    font-size: 10px;
+}
+
+.nav__item-en {
+    color: #000000;
+    font-size: 14px;
+}
+
+.nav__item-jp {
+    color: #777777;
+    font-size: 10px;
+}
+
+/*1-2. フッタモジュール */
+footer {
+    background-color: #333333;
+    height: 261px;
+	color: #fff;
+    text-align: center;
+}
+
+.footer-nav {
+	padding-top: 30px;
+	padding-bottom: 10px;
+}
+
+.footer-nav-list__item {
+    display: inline;
+    margin: 0 20px;
+}
+.footer-nav-list__item+ .footer-nav-list__item {
+    border-left: 1px solid white;
+	padding-left: 40px;
+}
+
+.footer-nav-list__item-content {
+    font-size: 10px;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.footer-share-title {
+	font-size: 10px;
+}
+
+.share-facebook,
+.share-twitter,
+.share-line {
+	font-size: 20px;
+	padding: 0 10px;
+}
+
+.move-to-facebook {
+	margin: 15px 0;
+}
+
+.copyright {
+	font-size: 9px;
+}
+
+.footer-color {
+    color: white;
+}
+
+/*1-3. ボタンモジュール*/
+/*1-3-1. 矢印つきボタン*/
+.btn-arrow {
+	display: inline-block;
+	width: 157.12px;
+	height: 35.8px;
+	text-align: center;
+	line-height: 35.8px;
+  }
+  
+  .btn-arrow span {
+	position: relative;
+	font-size: 13px;
+	padding-right: 10%;
+  }
+  
+  /*矢印つきボタン 白*/
+  .btn--white {
+	  background: #fff;
+  }
+  
+  .btn--white span {
+	  color: #333333;
+  }
+  
+  .btn--white span::before{
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 95%;
+	width: 7px;
+	height: 7px;
+	border-top: 1.5px solid #333333;
+	border-right: 1.5px solid #333333;
+	transform: rotate(45deg);
+	margin-top: -5px;
+  }
+  
+  /*矢印つきボタン ピンク*/
+  .btn--pink {
+	  background: #D4004E;
+  }
+  
+  .btn--pink span {
+	  color: #FFFFFF;
+  }
+  
+  .btn--pink span::before{
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 95%;
+	width: 7px;
+	height: 7px;
+	border-top: 1.5px solid #FFFFFF;
+	border-right: 1.5px solid #FFFFFF;
+	transform: rotate(45deg);
+	margin-top: -5px;
+  }
+
+/*
+**Module - 2. 個別指定
+*/
+
+/*2-1. TOPページ*/
+
+/*トップ部、共通部品*/
+#main-visual__img {
+    position: relative;
+    top: -180px;
+}
+
+.head__title {
+	font-size: 43px;
+	color: #333333;
+    vertical-align: top;
+    margin-left: 20px;
+}
+
+.img-exclamation {
+    vertical-align: top;
+}
+
+.news__head {
+    position: relative;
+    top: 30px;
+    z-index: 10;
+}
+
+.about__head {
+    position: relative;
+    top: 30px;
+    z-index: 10;
+}
+
+/*About部*/
+.about {
+    width: 100%;
+}
+.about__foot {
+	text-align: center;
+}
+
+.about__description {
+    background-color: #F2F3F7;
+    padding: 40px 50px 60px 50px;
+    line-height: 40px;
+    margin-left: 15px;
+}
+
+.move-to-about {
+    position: relative;
+    top: -20px;
+	margin-bottom: 100px;
+}
+
+/*Service部*/
+.service__img {
+    width: 100%;
+}
+
+.service__table {
+    border-spacing: 0px 60px;
+}
+
+.service__table-content {
+    padding: 20px 80px;
+}
+
+.service__content-title {
+    color: #D4004E;
+    font-size: 20px;
+}
+
+.service__content-description {
+    font-size: 13px;
+    line-height: 35px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.service__content-foot {
+    text-align: center;
+}
+
+/*News部*/
+
+.news__items {
+    display: table;
+    width: 100%;
+}
+
+.news__item {
+	min-height: 26px;
+	line-height: 26px;
+	margin-bottom: 15px;
+    margin-left: 25px;
+    background-color: #F2F3F7;
+    padding: 30px 30px;
+}
+
+.box-arrow{
+  position: relative;
+  padding-left: 20px;
+}
+
+.box-arrow::before{
+  content: '';
+  width: 8px;
+  height: 8px;
+  border: 0px;
+  border-top: solid 2px #333333;
+  border-right: solid 2px #333333;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 50%;
+  right: 3%;
+  margin-top: -4px;
+}
+
+.news__table {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.news__box {
+    text-align: center;
+	width: 159px;
+	height: 26px;
+    border: solid 1px #000000;
+    font-size: 12px;
+    display: inline-block;
+}
+
+.news__box--orange{
+    border: solid 1px #E5A31C;
+    color: #E5A31C;
+}
+
+.news__box--pink{
+    border: solid 1px #D4004E;
+    color: #D4004E;
+}
+
+.news__box--green{
+    border: solid 1px #5FA153;
+    color: #5FA153;
+}
+
+.news__box--blue{
+    border: solid 1px #50BBF4;
+    color: #50BBF4;
+}
+
+.news__description {
+	font-size: 13px;
+}
+
+.news__description-date {
+    margin-left: 20px;
+}
+
+.news__description-border {
+    margin-left: 25px;
+    margin-right: 25px;
+    font-size: 20px;
+}
+
+.news__foot {
+	text-align: center;
+}
+
+.move-to-news {
+	margin: 30px 0 100px 0;
+}
+
+
+/*
+**State
+*/
+
+/*TOPページ*/
+.btn-arrow:hover {
+	opacity: 0.7;
+}
+
+.nav__item-btn::after {
+    border-bottom: solid 1.5px #777777;
+    bottom: 0;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+}
+
+.nav__item-btn:hover::after {
+    width: 100%;
+}
+
+.news__item:hover {
+    background-color: #DBDCDD;
+}
+
+.footer-nav-list__item-content::after {
+    border-bottom: solid 1px #fff;
+    bottom: 0;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+}
+
+.footer-nav-list__item-content:hover::after {
+    width: 100%;
+}
+
+.share-facebook:hover,
+.share-twitter:hover,
+.share-line:hover {
+    opacity: 0.7;
+}
+
+/*
+**Theme
+*/
