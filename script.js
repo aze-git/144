@@ -1,14 +1,82 @@
 $(function () {
 
-  //ページネーションの数字をクリックされた時の動き
-  $('.page').click(function () {
-    //最大ページ数を取得
-    var $max_page = 12;
-    var $clicked_page_number = Number($(this).text());
+  var $max_page_number = 12;
 
-    //1.ページネーションを送る
-    //クリックされたページの取得
-    if ($clicked_page_number <= 2) {
+  /////////////////////////
+  //// NEWSページのページネーションの実装
+  /////////////////////////
+
+  //1. ページネーションの数字をクリックされた時の動き
+  $('.page').click(function () {
+
+    //1-1. 遷移先で表示されるページ番号の一覧に変える
+    var $next_page_number = Number($(this).text());
+    changePageNumbers($next_page_number);
+
+    //1-2. 遷移先ページ番号の色を変える
+    var $current_page = $('.pagenation').find('.selected-page');
+    var $next_page = $(".color-changable:contains(" + $next_page_number + ")");
+    changeSelectedPage($current_page, $next_page);
+
+  });
+
+
+  //2. 次へをクリックされた時の動き
+  $('.move-to-next-news').click(function () {
+
+    //2-1. 遷移先で表示されるページ番号の一覧に変える
+    var $current_page = $('.pagenation').find('.selected-page');
+    var $current_page_number = $($current_page).text();
+    $current_page_number = Number($current_page_number);
+
+    var $next_page_number;
+    if ($current_page_number === $max_page_number) {
+      $next_page_number = $max_page_number;
+    } else {
+      $next_page_number = $current_page_number + 1;
+    }
+    console.log($current_page_number);
+    console.log($next_page_number);
+
+    changePageNumbers($next_page_number);
+
+    //2. クリックされたページの色を変える
+    var $next_page = $(".color-changable:contains(" + $next_page_number + ")");
+    changeSelectedPage($current_page, $next_page);
+
+  });
+
+
+  //3. 前へをクリックされた時の動き
+  $('.move-to-before-news').click(function () {
+
+    //2-1. 遷移先で表示されるページ番号の一覧に変える
+    var $current_page = $('.pagenation').find('.selected-page');
+    var $current_page_number = $($current_page).text();
+    $current_page_number = Number($current_page_number);
+
+    var $next_page_number;
+    if ($current_page_number === 1) {
+      $next_page_number = 1;
+    } else {
+      $next_page_number = $current_page_number - 1;
+    }
+
+    changePageNumbers($next_page_number);
+
+    //2. クリックされたページの色を変える
+    var $next_page = $(".color-changable:contains(" + $next_page_number + ")");
+    changeSelectedPage($current_page, $next_page);
+
+  });
+
+
+
+  ////////////
+  // Functionの定義
+  ////////////
+  function changePageNumbers($next_page_number) {
+    if ($next_page_number <= 2) {
       $('.initial-page').css('display', 'none');
       $('.last-page').css('display', 'inline');
       $('.first-page').text(1);
@@ -16,62 +84,39 @@ $(function () {
       $('.third-page').text(3);
       $('.fourth-page').text(4);
       $('.fifth-page').text(5);
-    } else if ($clicked_page_number >= 3 && $clicked_page_number <= ($max_page - 6)) {
+    } else if ($next_page_number >= 3 && $next_page_number <= ($max_page_number - 6)) {
       $('.initial-page').css('display', 'inline');
       $('.last-page').css('display', 'inline');
-      $('.first-page').text($clicked_page_number);
-      $('.second-page').text($clicked_page_number + 1);
-      $('.third-page').text($clicked_page_number + 2);
-      $('.fourth-page').text($clicked_page_number + 3);
-      $('.fifth-page').text($clicked_page_number + 4);
-    } else if ($clicked_page_number === ($max_page - 5)) {
+      $('.first-page').text($next_page_number);
+      $('.second-page').text($next_page_number + 1);
+      $('.third-page').text($next_page_number + 2);
+      $('.fourth-page').text($next_page_number + 3);
+      $('.fifth-page').text($next_page_number + 4);
+    } else if ($next_page_number === ($max_page_number - 5)) {
       $('.initial-page').css('display', 'inline');
       $('.last-page').css('display', 'none');
-      $('.first-page').text($clicked_page_number);
-      $('.second-page').text($clicked_page_number + 1);
-      $('.third-page').text($clicked_page_number + 2);
-      $('.fourth-page').text($clicked_page_number + 3);
-      $('.fifth-page').text($clicked_page_number + 4);
-    } else if ($clicked_page_number >= ($max_page - 4)) {
+      $('.first-page').text($next_page_number);
+      $('.second-page').text($next_page_number + 1);
+      $('.third-page').text($next_page_number + 2);
+      $('.fourth-page').text($next_page_number + 3);
+      $('.fifth-page').text($next_page_number + 4);
+    } else if ($next_page_number >= ($max_page_number - 4)) {
       $('.initial-page').css('display', 'inline');
       $('.last-page').css('display', 'none');
-      $('.first-page').text($max_page - 4);
-      $('.second-page').text($max_page - 3);
-      $('.third-page').text($max_page - 2);
-      $('.fourth-page').text($max_page - 1);
-      $('.fifth-page').text($max_page);
+      $('.first-page').text($max_page_number - 4);
+      $('.second-page').text($max_page_number - 3);
+      $('.third-page').text($max_page_number - 2);
+      $('.fourth-page').text($max_page_number - 1);
+      $('.fifth-page').text($max_page_number);
     }
+  }
 
-    //2. クリックされたページの色を変える
-    var $contained_pages = $(".color-changable:contains(" + $clicked_page_number + ")");
-
-    for (var i = 0; i < $contained_pages.length; i++) {
-      var $contained_page = $contained_pages[i];
-      var $contained_page_number = $($contained_page).text();
-      $contained_page_number = Number($contained_page_number);
-      if ($contained_page_number === $clicked_page_number) {
-        var $current_page = $('.pagenation').find('.selected-page');
-        $($current_page).removeClass('selected-page');
-        $($contained_page).addClass('selected-page');
-      }
-
-    }
-
-
-  });
-　
-  //前へボタンをクリックされた時の動き　
-  $('.move-to-before-news').click(function () {
-    var $max_page = 12;
-    var $current_page = $('.pagenation').find('.selected-page');
-    var $current_page_number = $($current_page).text();
-    $current_page_number = Number($current_page_number);
-    
-    //1.ページネーションを送る
-    //ToDo: 実装する
-    //2. クリックされたページの色を変える
-    //ToDo: 実装する
-  });
-
+  function changeSelectedPage($current_page, $next_page) {
+    $($current_page).removeClass('selected-page');
+    $($next_page).addClass('selected-page');
+  }
+  ////////////
+  // Functionの定義終わり
+  ////////////
 
 });
