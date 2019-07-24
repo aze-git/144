@@ -63,6 +63,11 @@ ul {
   margin-bottom: 100px;
 }
 
+.bg-mask {
+  height: 100%;
+  background: rgba(255,255,255,0.5);
+}
+
 .company-info {
   margin-bottom: 100px;
 }
@@ -73,6 +78,12 @@ ul {
 
 .executives {
   margin-bottom: 140px;
+}
+
+/*CONTACT画面*/
+
+.google-form {
+  text-align: center;
 }
 
 
@@ -640,6 +651,7 @@ footer {
   opacity: 0.7;
 }
 
+/* delete
 .nav__item-btn::after {
   border-bottom: solid 1.5px #777777;
   bottom: 0;
@@ -652,6 +664,7 @@ footer {
 .nav__item-btn:hover::after {
   width: 100%;
 }
+*/
 
 .news__item:hover, .news__item-wide:hover {
   background-color: #DBDCDD;

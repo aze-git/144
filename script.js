@@ -1,10 +1,27 @@
 $(function () {
 
-  var $max_page_number = 12;
 
   /////////////////////////
-  //// NEWSページのページネーションの実装
+  //// ヘッダにマウスオーバーした時のアクション
   /////////////////////////
+
+  $('.nav__item-btn').hover(
+    function () {
+      $(this).find('.nav__item-en').css('color', '#D4004E');
+      $(this).find('.nav__item-jp').css('color', '#D4004E');
+    },
+    function () {
+      $(this).find('.nav__item-en').css('color', '#000000');
+      $(this).find('.nav__item-jp').css('color', '#777777');
+    }
+  );
+
+
+  /////////////////////////
+  //// NEWSページのページネーション
+  /////////////////////////
+
+  var $max_page_number = 12;
 
   //1. ページネーションの数字をクリックされた時の動き
   $('.page').click(function () {
@@ -35,8 +52,6 @@ $(function () {
     } else {
       $next_page_number = $current_page_number + 1;
     }
-    console.log($current_page_number);
-    console.log($next_page_number);
 
     changePageNumbers($next_page_number);
 
