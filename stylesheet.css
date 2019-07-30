@@ -548,8 +548,8 @@ footer {
 }
 
 .access__map {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
+  width: 100％;
+  max-width: 980px;
 }
 
 .access__description {
