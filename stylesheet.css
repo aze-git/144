@@ -547,15 +547,14 @@ footer {
   margin-top: 20px;
 }
 
-.access__map {
-  width: 100％;
-  max-width: 980px;
+.access__container {
+  margin-left: 30px;
 }
 
 .access__description {
   background-color: #F2F3F7;
   padding: 30px 40px;
-  margin: 40px 0 40px 30px;
+  margin: 40px 0 40px 0;
 }
 
 .executive__table-row {
